@@ -9,7 +9,11 @@ export const AddTodo = ({addTodo}: IAddTodoProps) => {
 
     const handleSubmit = (e: FormEvent) => {
         e.preventDefault()
-         addTodo(inputValue)
+        if(inputValue.trim() ==='') {
+            return
+        }
+        addTodo(inputValue)
+        setInputValue('')
     }
 
     return(

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AddTodo } from "./AddTodo";
 import { Todo } from "../model/Todo";
+import { Todos } from "./Todos";
 
 
 export const TodoApp = () => {
@@ -29,6 +30,7 @@ export const TodoApp = () => {
     return(
         <>
         <AddTodo addTodo={createTodo}/>
+        <Todos todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
         </>
     )
 }
