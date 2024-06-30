@@ -13,8 +13,8 @@ export const TodoPresentation = ({todo, toggleTodo, deleteTodo}: ITodoPresentati
         <div className="todoItem">
             <span className={todo.done ? 'done': ''}>{todo.text}</span>
             <div>
-            <button onClick={() => toggleTodo(todo.id)}>{todo.done ? 'Undone': 'Done'}</button>
-            <button onClick={() => deleteTodo(todo.id)}>Ta bort</button>
+            <button onClick={() => toggleTodo(todo.id)} className="toggleBtn">{todo.done ? 'Oklar': 'Klar'}</button>
+            <button onClick={() => deleteTodo(todo.id)} className="deleteBtn">Ta bort</button>
             </div>
         </div>
     )
