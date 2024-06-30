@@ -25,6 +25,7 @@ export const AddTodo = ({addTodo}: IAddTodoProps) => {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             maxLength={15}
+            placeholder="Add Todo"
             />
             <button>Spara</button>
         </form>

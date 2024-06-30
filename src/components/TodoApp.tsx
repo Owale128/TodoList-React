@@ -32,9 +32,12 @@ export const TodoApp = () => {
     }
 
     return(
+        <>
+        <h1>TodoList</h1>
         <div className="todosContainer">
         <AddTodo addTodo={createTodo}/>
         <Todos todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
         </ div>
+        </>
     )
 }
