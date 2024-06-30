@@ -63,8 +63,9 @@ h1 {
     }
 
     .todosContainer{
-        width: 90vw;
-        padding: 1rem;
+        width: 97vw;
+        padding: 0 0 2rem 0;
+
         
         .todoItem{
             margin: 0.5rem 0;
@@ -81,12 +82,12 @@ h1 {
             } 
 
             button {
-                font-size: 1.3rem;
+                font-size: 1.2rem;
             }
 
             .toggleBtn {
                 color: black;
-                margin-right: 0.7rem;
+                margin-right: 0.5rem;
                 background-color: rgb(1, 184, 1);
 
                 &:hover {

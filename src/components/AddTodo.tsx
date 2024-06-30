@@ -24,7 +24,7 @@ export const AddTodo = ({addTodo}: IAddTodoProps) => {
             <input type="text"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
-            maxLength={15}
+            maxLength={20}
             placeholder="Skriv här..."
             />
             <button className="addBtn">Lägg till</button>
