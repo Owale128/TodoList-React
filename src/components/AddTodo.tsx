@@ -1,4 +1,6 @@
 import { FormEvent, useState } from "react"
+import '../sass/form.scss'
+
 
 interface IAddTodoProps {
     addTodo: (todoText: string) => void;
@@ -22,6 +24,7 @@ export const AddTodo = ({addTodo}: IAddTodoProps) => {
             <input type="text"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
+            maxLength={15}
             />
             <button>Spara</button>
         </form>

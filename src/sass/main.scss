@@ -1,0 +1,32 @@
+body {
+    background-color: aliceblue;
+}
+
+.todosContainer {
+    padding: 2rem;
+    width: 22rem;
+    border-radius: 1rem;
+    background-color: white;
+    border: 0.1rem solid black;
+
+    .todoItem {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        span {
+            color: black;
+            font-size: 1.3rem;   
+        }
+        
+        .done {
+            text-decoration: line-through;
+            color: red;
+        } 
+    }
+        button {
+            margin: 0.5rem;
+            padding: 0.3rem;
+            border: 0.01rem solid black;
+        }
+}
