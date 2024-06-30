@@ -7,7 +7,7 @@ h1 {
     margin-top: 6rem;
 }
 .todosContainer {
-    width: 22rem;
+    width: 25rem;
     padding: 1rem;
     border-radius: 1rem;
     background-color: white;
@@ -23,7 +23,7 @@ h1 {
         span {
             color: black;
             font-weight: 500;
-            font-size: 1.4rem;   
+            font-size: 1.6rem;   
         }
         
         .done {
@@ -33,6 +33,7 @@ h1 {
         } 
 
         .toggleBtn {
+            
             &:hover {
                 background-color: rgb(1, 184, 1);
             }
@@ -46,12 +47,12 @@ h1 {
         }
     }
         button {
-            transition: 0.1s ease-in;
             margin: 0.2rem;
-            padding: 0 0.2rem 0.2rem 0.2rem;
+            font-size: 1.2rem;
+            transition: 0.1s ease-in;
             border: 0.01rem solid black;
+            padding: 0 0.2rem 0.2rem 0.2rem;
             box-shadow: 0rem 0.6rem 1rem rgba(0, 0, 0, 0.4);
-            
         }
 }
 
@@ -62,7 +63,7 @@ h1 {
     }
 
     .todosContainer{
-        width: 90vw;
+        width: 89vw;
         padding: 1rem;
         
         .todoItem{
@@ -70,7 +71,7 @@ h1 {
             padding: 0 0.5rem;
             border-bottom: 0.01rem solid black;
             span {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
 
             .done {
