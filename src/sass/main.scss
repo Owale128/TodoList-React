@@ -77,19 +77,15 @@ h1 {
             } 
 
             button {
-                font-size: 1.1rem;
+                font-size: 1.4rem;
             }
 
             .toggleBtn {
-                &:hover {
-                    background-color: white;
-                } 
+                background-color: rgb(1, 184, 1);    
             }
     
             .deleteBtn {
-                &:hover {
-                    background-color: white;
-                }
+                background-color: rgb(255, 0, 0); 
             }
         }
     }
