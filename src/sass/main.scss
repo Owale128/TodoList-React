@@ -65,7 +65,9 @@ h1 {
         width: 76vw;
         
         .todoItem{
-
+            margin: 0.5rem 0;
+            padding: 0 0.5rem;
+            border-bottom: 0.01rem solid black;
             span {
                 font-size: 1.2rem;
             }
@@ -74,11 +76,14 @@ h1 {
                 text-decoration-thickness: 0.11em;  
             } 
 
+            button {
+                font-size: 1.1rem;
+            }
+
             .toggleBtn {
                 &:hover {
                     background-color: white;
-                }
-                
+                } 
             }
     
             .deleteBtn {

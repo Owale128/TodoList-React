@@ -12,7 +12,7 @@ form {
             color: transparent;
         }
     }
-    
+
     .addBtn {
         background-color: black;
         color: white;
@@ -25,7 +25,11 @@ form{
 
     input {
         width: 12rem;
-        margin: 0 1.2rem 1rem 0.7rem;
+        margin: 0 1rem 2rem 0;
+    }
+
+    .addBtn {
+        font-size: 1.1rem;
     }
 }
     
