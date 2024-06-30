@@ -62,7 +62,7 @@ h1 {
     }
 
     .todosContainer{
-        width: 76vw;
+        width: 81vw;
         
         .todoItem{
             margin: 0.5rem 0;
@@ -82,12 +82,20 @@ h1 {
 
             .toggleBtn {
                 color: black;
-                background-color: rgb(1, 184, 1);    
+                background-color: rgb(1, 184, 1);
+
+                &:hover {
+                    background-color: rgb(1, 184, 1);
+                    }   
             }
     
             .deleteBtn {
                 color: black;
                 background-color: rgb(255, 0, 0); 
+
+                &:hover {
+                    background-color: rgb(255, 0, 0);
+                }
             }
         }
     }
