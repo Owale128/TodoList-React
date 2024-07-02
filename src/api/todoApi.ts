@@ -11,3 +11,33 @@ export const fetchTodos = async () => {
         throw error;
     }
 };
+
+export const createTodo = async (todoText: string) => {
+    try {
+        const response = await axios.post(`${API_URL}/api/post`, {
+            title: todoText,
+            completed: false,
+        });
+        return response.data
+    } catch (error) {
+        console.error('Error creating todo:', error)
+        throw error
+    }
+}
+
+export const toggleTodo = async (id: string) => {
+    try {
+        await axios.put(`${API_URL}/api/complete/${id}`);
+    } catch (error) {
+        console.error('Error toggling todo:', error)
+        throw error;
+    }
+}
+
+export const deleteTodo = async (id: string) => {
+    try {
+        await axios.delete(`${API_URL}/delete/${id}`)
+    } catch (error) {
+        console.error('Error deleting todo:', error)
+    }
+}

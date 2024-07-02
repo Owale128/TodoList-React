@@ -1,16 +1,29 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AddTodo } from "./AddTodo";
 import { Todo } from "../model/Todo";
 import { Todos } from "./Todos";
 import '../sass/main.scss'
+import { fetchTodos } from "../api/todoApi";
 
 export const TodoApp = () => {
 
     const[todos, setTodos] = useState<Todo[]>([])
 
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const todosData = await fetchTodos()
+                setTodos(todosData)
+            } catch (error) {
+                console.error('Error fetching todos:', error)
+            }
+        }
+        fetchData();
+    }, [])
+
     const createTodo = (todoText: string) => {
         setTodos([...todos, new Todo(todoText)])
-        localStorage.setItem('todos', JSON.stringify(todos))
+       
     }
 
     const toggleTodo = (id: number) => {
