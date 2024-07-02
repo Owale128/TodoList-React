@@ -1,18 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { AddTodo } from "./AddTodo";
 import { Todo } from "../model/Todo";
 import { Todos } from "./Todos";
 import '../sass/main.scss'
 
-
 export const TodoApp = () => {
-    const todosInLocalStorage: Todo[] = JSON.parse(localStorage.getItem('todos') || '[]');
 
-    const[todos, setTodos] = useState<Todo[]>(todosInLocalStorage)
-
-    useEffect(() => {
-        localStorage.setItem('todos', JSON.stringify(todos))
-    }, [todos])
+    const[todos, setTodos] = useState<Todo[]>([])
 
     const createTodo = (todoText: string) => {
         setTodos([...todos, new Todo(todoText)])
