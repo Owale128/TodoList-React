@@ -3,8 +3,8 @@ import { TodoPresentation } from "./Todo";
 
 interface ITodos {
     todos: Todo[]
-    toggleTodo: (id: number) => void;
-    deleteTodo: (id: number) => void;
+    toggleTodo: (id: string) => void;
+    deleteTodo: (id: string) => void;
 }
 
 export const Todos = ({todos, toggleTodo, deleteTodo}: ITodos) => {
@@ -13,7 +13,7 @@ export const Todos = ({todos, toggleTodo, deleteTodo}: ITodos) => {
         <div>
         {todos.map((todo) =>(
             <TodoPresentation 
-            key={todo.id}
+            key={todo._id}
             todo={todo}
             toggleTodo={toggleTodo}
             deleteTodo={deleteTodo}

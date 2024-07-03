@@ -1,8 +1,8 @@
 export class Todo {
-    id: number;
+    _id: string;
     done: boolean;
-    constructor(public text:string) {
-        this.id = Date.now();
+    constructor(public title:string) {
+        this._id = '';
         this.done = false;
     }
 }

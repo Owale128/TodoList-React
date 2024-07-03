@@ -36,7 +36,7 @@ export const toggleTodo = async (id: string) => {
 
 export const deleteTodo = async (id: string) => {
     try {
-        await axios.delete(`${API_URL}/delete/${id}`)
+        await axios.delete(`${API_URL}/api/delete/${id}`)
     } catch (error) {
         console.error('Error deleting todo:', error)
     }
