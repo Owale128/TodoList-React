@@ -4,6 +4,7 @@ import { Todo } from "../model/Todo";
 import { Todos } from "./Todos";
 import '../sass/main.scss'
 import { createTodo, deleteTodo, fetchTodos, toggleTodo } from "../api/todoApi";
+import { initializeOneSignal } from "../oneSignalConfig";
 
 export const TodoApp = () => {
 
@@ -19,6 +20,7 @@ export const TodoApp = () => {
             }
         }
         fetchData();
+        initializeOneSignal()
     }, [])
 
     const handleAddTodo = async (todoText: string) => {
