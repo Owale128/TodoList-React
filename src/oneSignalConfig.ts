@@ -6,6 +6,6 @@ export const initializeOneSignal = async () => {
         notifyButton: {
             enable: true,
         },
-        serviceWorkerPath: '/OneSignalSDKWorker.js'
+        serviceWorkerPath: '../public/OneSignalSDKWorker.js'
     })
 }
