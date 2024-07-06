@@ -17,6 +17,7 @@ export const createTodo = async (todoText: string, userId: string | null) => {
         const response = await axios.post(`${API_URL}/api/post`, {
             title: todoText,
             completed: false,
+            userId: userId
         });
         return response.data
     } catch (error) {
