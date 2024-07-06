@@ -12,12 +12,11 @@ export const fetchTodos = async () => {
     }
 };
 
-export const createTodo = async (todoText: string, userId: string | null) => {
+export const createTodo = async (todoText: string) => {
     try {
         const response = await axios.post(`${API_URL}/api/post`, {
             title: todoText,
             completed: false,
-            userId: userId
         });
         return response.data
     } catch (error) {

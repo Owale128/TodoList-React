@@ -4,12 +4,11 @@ import { Todo } from "../model/Todo";
 import { Todos } from "./Todos";
 import '../sass/main.scss'
 import { createTodo, deleteTodo, fetchTodos, toggleTodo } from "../api/todoApi";
-import { initializeOneSignal } from "../oneSignalConfig";
+
 
 export const TodoApp = () => {
 
     const[todos, setTodos] = useState<Todo[]>([])
-    const [userId, setUserId] = useState<string | null>(null);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -20,23 +19,12 @@ export const TodoApp = () => {
                 console.error('Error fetching todos:', error)
             }
         }
-
-        const initOneSignal = async () => {
-            try {
-                const id = await initializeOneSignal();
-                setUserId(id);
-            } catch (error) {
-                console.error('Error initializing OneSignal:', error);
-            }
-        };
-
         fetchData();
-        initOneSignal()
     }, [])
 
     const handleAddTodo = async (todoText: string) => {
         try{
-            const newTodoData = await createTodo(todoText, userId); 
+            const newTodoData = await createTodo(todoText); 
             setTodos([...todos, newTodoData])
         } catch (error) {
             console.error('Error adding todo:', error)
