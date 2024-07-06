@@ -10,4 +10,6 @@ Link to the app: https://todo-list-react-git-main-owale128s-projects.vercel.app/
 # Stack:
 [![My Skills](https://skillicons.dev/icons?i=ts,html,react,sass)](https://skillicons.dev)
 
+#
+
 Link to the backend repo: https://github.com/Owale128/TodoListBackend-React
