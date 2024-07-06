@@ -9,6 +9,7 @@ import { initializeOneSignal } from "../oneSignalConfig";
 export const TodoApp = () => {
 
     const[todos, setTodos] = useState<Todo[]>([])
+    const [userId, setUserId] = useState<string | null>(null);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -19,13 +20,23 @@ export const TodoApp = () => {
                 console.error('Error fetching todos:', error)
             }
         }
+
+        const initOneSignal = async () => {
+            try {
+                const userId = await initializeOneSignal();
+                setUserId(userId);
+            } catch (error) {
+                console.error('Error initializing OneSignal:', error);
+            }
+        };
+
         fetchData();
-        initializeOneSignal()
+        initOneSignal()
     }, [])
 
     const handleAddTodo = async (todoText: string) => {
         try{
-            const newTodoData = await createTodo(todoText); 
+            const newTodoData = await createTodo(todoText, userId); 
             setTodos([...todos, newTodoData])
         } catch (error) {
             console.error('Error adding todo:', error)
