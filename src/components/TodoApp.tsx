@@ -23,8 +23,8 @@ export const TodoApp = () => {
 
         const initOneSignal = async () => {
             try {
-                const userId = await initializeOneSignal();
-                setUserId(userId);
+                const id = await initializeOneSignal();
+                setUserId(id);
             } catch (error) {
                 console.error('Error initializing OneSignal:', error);
             }
